@@ -2,6 +2,7 @@ package lesson_2.homework;
 
 public class Tasks {
     public static void main(String[] args) {
+        task_3();
     }
 
     /**
@@ -11,13 +12,13 @@ public class Tasks {
     public static void task_1() {
         int a = 1;
         String b = "1";
-//        if (a == b) {
-//            System.out.println("success");
-//        }
+        if (a == Integer.parseInt(b)) {
+            System.out.println("success");
+        }
 
-//        if (b.equals(a)) {
-//            System.out.println("success");
-//        }
+        if (b.equals(Integer.toString(a))) {
+            System.out.println("success");
+        }
     }
 
     /**
@@ -31,15 +32,20 @@ public class Tasks {
                     System.out.print(1);
                 case "two":
                     System.out.print(2);
+                    break;
                 case "three":
                     System.out.print(3);
+                    break;
                 default:
                     System.out.print(5);
             }
 
             switch (str.indexOf("o")) {
                 case 0:
+                    break;
                 case 1:
+                    System.out.print(5);
+                    break;
                 case 2:
                     System.out.print(10);
             }
@@ -54,11 +60,11 @@ public class Tasks {
      */
     public static void task_3() {
         for (int i = 0; i < 4; i++) {
-//            if (compare(i, ???) ??? decreaseAndCompare(i, ???) ??? incrementAndCompare(i, ???)) {
-//                System.out.print("4");
-//            } else if (decreaseAndCompare(???, i) ??? incrementAndCompare(???, i) ??? compare(???, i)) {
-//                System.out.print("8");
-//            }
+            if (compare(i, 1) && decreaseAndCompare(i, 0) & incrementAndCompare(i, 100)) {
+                System.out.print("4");
+            } else if (decreaseAndCompare(0, i) & incrementAndCompare(100, i) & compare(100, i)) {
+                System.out.print("8");
+            }
         }
 
     }
@@ -80,4 +86,5 @@ public class Tasks {
         if (result) System.out.print(a);
         return result;
     }
+
 }
